@@ -154,7 +154,7 @@ EOF  all  create  destroy  help  quit  show  update
 No known bugs at this time. 
 
 ## Authors
-Sandra Udeike - 
+Sandra Udeike - [Github](https://github.com/sandymaramma) / [Twitter](https://twitter.com/sandymaramma)
 Oluwabunmi Olabode - [Github](https://github.com/victoriabunmi72) / [Twitter](https://twitter.com/Victori32799425)
 
 Second part of Airbnb: Joann Vuong
