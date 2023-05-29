@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""a folder api at the root of the project with an empty file __init__.py"""
 
 from flask import Flask
 from api.v1.views import app_views
