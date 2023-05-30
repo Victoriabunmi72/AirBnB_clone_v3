@@ -67,6 +67,32 @@ test_db_storage.py'])
             self.assertTrue(len(func[1].__doc__) >= 1,
                             "{:s} method needs a docstring".format(func[0]))
 
+    def test_get(self):
+        """To test the get method"""
+        if os.getenv("HBNB_TYPE_STORAGE") == "db":
+            storage = DBStorage()
+            state = State(name="joules")
+            joules_id = state.id
+            state.save()
+            state = storage.get("State", joules_id)
+            self.assertEqual(state.name, "joules")
+            self.assertEqual(state.id, joules_id))
+
+    def test_count(self):
+        """To test the count method"""
+        if os.getenv("HBNB_TYPE_STORAGE") == "db":
+            storage = DBStorage()
+            count = storage.count()
+            self.assertEqual(count, 0)
+            state = State(name="joules")
+            state.save()
+            count = storage.count()
+            self.assertEqual(count, 1)
+            state = State(name="Algeria")
+            state.save()
+            count = storage.count()
+
+            self.assertEqual(count, 2)
 
 class TestFileStorage(unittest.TestCase):
     """Test the FileStorage class"""
